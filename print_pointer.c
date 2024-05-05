@@ -19,14 +19,14 @@ int	hex(unsigned long nbr, char *hexset, int count)
 	return (count);
 }
 
-int	print_pointer(unsigned long n, char *base, int count)
+int	print_pointer(unsigned long n, char *hexset, int count)
 {
 	int	temp;
 
 	temp = 0;
 	if (print_str("0x") < 0)
 		return (-1);
-	temp = hex(n, base, count);
+	temp = hex(n, hexset, count);
 	if (temp < 0)
 		return (temp);
 	return (temp + 2);
